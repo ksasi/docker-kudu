@@ -32,6 +32,7 @@ kudu0.5.0_amd64.deb libkuduclient0_0.5.0+cdh5.4.0+0-1.kudu0.5.0.p0.15~trusty-kud
 
 
 #Dynamic script generation to enable service start when container boots
+RUN echo "sudo service ntp restart" >> kudu_start.sh
 RUN echo "sudo service kudu-master start" >> kudu_start.sh
 RUN echo "sudo service kudu-tserver start" >> kudu_start.sh
 
